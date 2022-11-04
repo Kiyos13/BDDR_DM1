@@ -26,13 +26,33 @@ namespace BDDR_DM1
 
         void CS_Click(object sender, RoutedEventArgs e)
         {
+            Window clubSportifWin = new ListCS();
+            this.Close();
+            clubSportifWin.Show();
         }
 
         void Match_Click(object sender, RoutedEventArgs e)
         {
+            Window matchWin = new ListMatch();
+            this.Close();
+            matchWin.Show();
         }
 
         void Stade_Click(object sender, RoutedEventArgs e)
+        {
+            Window stadeWin = new ListStade();
+            this.Close();
+            stadeWin.Show();
+        }
+
+        void Deconnect_Click(object sender, RoutedEventArgs e)
+        {
+            Window connectWin = new MainWindow();
+            this.Close();
+            connectWin.Show();
+        }
+
+        void Add_Click(object sender, RoutedEventArgs e)
         {
         }
 

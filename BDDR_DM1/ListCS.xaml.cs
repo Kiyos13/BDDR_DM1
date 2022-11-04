@@ -43,5 +43,12 @@ namespace BDDR_DM1
         void CS_R5_Click(object sender, RoutedEventArgs e)
         {
         }
+
+        void Return_Click(object sender, RoutedEventArgs e)
+        {
+            Window homePageWin = new HomePage();
+            this.Close();
+            homePageWin.Show();
+        }        
     }
 }

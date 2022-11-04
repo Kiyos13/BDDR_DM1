@@ -96,7 +96,7 @@
             </DataGrid>
         </Grid>
 
-        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Retour" Margin="20,30,0,0" Width="100" Height="20" Background="LightGray" />
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Retour" Margin="20,30,0,0" Width="100" Height="20" Background="LightGray" Click="Return_Click" />
 
     </Grid>
 </Window>

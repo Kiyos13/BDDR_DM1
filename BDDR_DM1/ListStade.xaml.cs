@@ -23,5 +23,12 @@ namespace BDDR_DM1
         {
             InitializeComponent();
         }
+
+        void Return_Click(object sender, RoutedEventArgs e)
+        {
+            Window homePageWin = new HomePage();
+            this.Close();
+            homePageWin.Show();
+        }
     }
 }
