@@ -30,9 +30,17 @@ namespace BDDR_DM1
 
         void Connect_Click(object sender, RoutedEventArgs e)
         {
-            Window homePageWin = new HomePage();
-            this.Close();
-            homePageWin.Show();
+            try
+            {
+                DBManager.SetConnection(user_textbox.Text.ToString(), password_textbox.Text.ToString());
+                Window homePageWin = new HomePage();
+                this.Close();
+                homePageWin.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("nom d'utilisateur ou mot de passe incorrect");
+            }
         }
 
     }

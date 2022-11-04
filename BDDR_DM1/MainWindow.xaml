@@ -13,8 +13,8 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" Text="Alexandre BAROUX - Mathis BAUMARD - Margot NOYELLE - Mathilde POMMIER" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,110,0,0" TextWrapping="Wrap" Text="Gestion d'une base de données pour la fédération française de football" VerticalAlignment="Top"/>
 
-        <TextBox HorizontalAlignment="Center" Margin="0,200,0,0" TextWrapping="Wrap" Text="Nom d'utilisateur" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,230,0,0" TextWrapping="Wrap" Text="Mot de passe" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="user_textbox" HorizontalAlignment="Center" Margin="0,200,0,0" TextWrapping="Wrap" Text="Nom d'utilisateur"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="password_textbox" HorizontalAlignment="Center" Margin="0,230,0,0" TextWrapping="Wrap" Text="Mot de passe" VerticalAlignment="Top" Width="120"/>
         <Button HorizontalAlignment="Center" Margin="0,270,0,0" Content="Se connecter" VerticalAlignment="Top"  Width="100" Height="20" Background="LightGray" Click="Connect_Click" />
 
     </Grid>
