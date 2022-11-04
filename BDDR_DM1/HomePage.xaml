@@ -13,7 +13,7 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" Text="Calendrier de votre région :" VerticalAlignment="Top"/>
 
         <Grid Margin="20,100,20,70">
-            <DataGrid Name="calendrierHomePage" AutoGenerateColumns="False">
+            <!--DataGrid Name="calendrierHomePage" AutoGenerateColumns="False" ColumnWidth="auto" Width="auto" Height="auto">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Code du match" Binding="{Binding CodeMatch}" />
                     <DataGridTextColumn Header="Date" Binding="{Binding Date}" />
@@ -24,10 +24,23 @@
                 </DataGrid.Columns>
                 <DataGrid.RowDetailsTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding DetailsCalendrier}" Margin="10" />
+                        <TextBlock Text="{Binding DetailsCalendrier}" Margin="10" Foreground="Black"/>
                     </DataTemplate>
                 </DataGrid.RowDetailsTemplate>
-            </DataGrid>
+            </DataGrid-->
+            <DataGrid 
+                x:Name="calendrierHomePage"
+                AutoGenerateColumns="True" 
+                AllowDrop="True" 
+                CanUserAddRows="False" 
+                HeadersVisibility="Column" 
+                FontSize="20" 
+                ColumnWidth="Auto" 
+                Width="Auto"
+                Height="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
 
         <Menu HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,20,40" Width="100" Height="20" Background="LightGray">
