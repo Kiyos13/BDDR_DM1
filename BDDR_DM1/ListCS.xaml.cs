@@ -72,6 +72,6 @@ namespace BDDR_DM1
             Window homePageWin = new HomePage();
             this.Close();
             homePageWin.Show();
-        }        
+        }
     }
 }

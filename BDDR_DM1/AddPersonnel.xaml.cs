@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace BDDR_DM1
 {
     /// <summary>
-    /// Logique d'interaction pour AddJoueur.xaml
+    /// Logique d'interaction pour AddPersonnel.xaml
     /// </summary>
-    public partial class AddJoueur : Window
+    public partial class AddPersonnel : Window
     {
-        public AddJoueur()
+        public AddPersonnel()
         {
             InitializeComponent();
         }

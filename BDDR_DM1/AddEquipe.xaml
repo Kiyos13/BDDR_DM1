@@ -1,0 +1,52 @@
+﻿<Window x:Class="BDDR_DM1.AddEquipe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDDR_DM1"
+        mc:Ignorable="d"
+        Background="AliceBlue"
+        WindowState="Maximized"
+        Title="AddEquipe" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" Text="Ajouter une équipe :" VerticalAlignment="Top"/>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Retour" Margin="20,30,0,0" Width="100" Height="20" Background="LightGray" Click="Return_Click" />
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock TextAlignment="Center" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Code du club" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Code du joueur" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Date de début de contrat" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Date de fin de contrat" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Numéro de maillot" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Poste" VerticalAlignment="Top"/>
+
+
+            <TextBox x:Name="equipe_code_club" Margin="0,60,0,0" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+            <TextBox x:Name="equipe_code_joueur" Margin="0,60,0,0" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+            <TextBox x:Name="equipe_date_debut_contrat" Margin="0,60,0,0" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+            <TextBox x:Name="equipe_date_fin_contrat" Margin="0,60,0,0" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+            <TextBox x:Name="equipe_numero_maillot" Margin="0,60,0,0" Grid.Column="5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+            <TextBox x:Name="equipe_poste" Margin="0,60,0,0" Grid.Column="6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        </Grid>
+
+        <Button Content="Ajouter l'équipe" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="LightGray" Width="150" Height="20"/>
+
+    </Grid>
+</Window>

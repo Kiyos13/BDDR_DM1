@@ -61,44 +61,58 @@ namespace BDDR_DM1
 
         private void Add_Joueur_Click(object sender, RoutedEventArgs e)
         {
-            Window addJoueurtWin = new AddJoueur();
+            Window addJoueurWin = new AddJoueur();
             this.Close();
-            addJoueurtWin.Show();
+            addJoueurWin.Show();
         }
 
         private void Add_Equipe_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addEquipeWin = new AddEquipe();
+            this.Close();
+            addEquipeWin.Show();
         }
 
         private void Add_Staff_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addStaffWin = new AddStaff();
+            this.Close();
+            addStaffWin.Show();
         }
 
         private void Add_Personnel_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addPersonnelWin = new AddPersonnel();
+            this.Close();
+            addPersonnelWin.Show();
         }
 
         private void Add_Stade_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addStadeWin = new AddStade();
+            this.Close();
+            addStadeWin.Show();
         }
 
         private void Add_Dirigeant_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addDirigeantWin = new AddDirigeant();
+            this.Close();
+            addDirigeantWin.Show();
         }
 
         private void Add_CS_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addClubSportifWin = new AddClubSportif();
+            this.Close();
+            addClubSportifWin.Show();
         }
 
         private void Add_Palmares_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addPalmaresWin = new AddPalmares();
+            this.Close();
+            addPalmaresWin.Show();
         }
     }
 }
