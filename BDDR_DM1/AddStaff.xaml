@@ -40,7 +40,7 @@
             <TextBox x:Name="staff_fonction" Margin="0,60,0,0" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
         </Grid>
 
-        <Button Content="Ajouter le membre du staff" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="LightGray" Width="150" Height="20"/>
+        <Button Content="Ajouter le membre du staff" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="LightGray" Width="150" Height="20" Click="onClickAdd"/>
 
     </Grid>
 </Window>

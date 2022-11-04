@@ -43,7 +43,7 @@
             <TextBox x:Name="stade_capacite" Margin="0,60,0,0" Grid.Column="5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
         </Grid>
 
-        <Button Content="Ajouter le stade" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="LightGray" Width="150" Height="20"/>
+        <Button Content="Ajouter le stade" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="LightGray" Width="150" Height="20" Click="onClickAdd"/>
 
     </Grid>
 </Window>

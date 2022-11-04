@@ -30,5 +30,21 @@ namespace BDDR_DM1
             this.Close();
             homePageWin.Show();
         }
+
+        private void onClickAdd(object sender, RoutedEventArgs e)
+        {
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+
+            int code = Convert.ToInt32(stade_code.Text.ToString());
+            string nom = stade_nom.Text.ToString();
+            string ville = stade_vile.Text.ToString();
+            string region = stade_region.Text.ToString();
+            int capacite = Convert.ToInt32(stade_capacite.Text.ToString());
+
+            string sqlStatement = "INSERT INTO Stade" + index + " VALUES(" + code + ", '" + nom + "', '" + ville + "', "
+                + ", '" + region + "', " + capacite + "')";
+            DBManager.Insert(sqlStatement);
+        }
     }
 }

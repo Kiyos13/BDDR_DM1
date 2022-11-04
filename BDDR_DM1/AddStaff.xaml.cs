@@ -30,5 +30,20 @@ namespace BDDR_DM1
             this.Close();
             homePageWin.Show();
         }
+
+        private void onClickAdd(object sender, RoutedEventArgs e)
+        {
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+
+            int codeStaff = Convert.ToInt32(staff_code_staff.Text.ToString());
+            string nom = staff_nom.Text.ToString();
+            int codeClub = Convert.ToInt32(staff_code_club.Text.ToString());
+            string fonction = staff_fonction.Text.ToString();
+
+            string sqlStatement = "INSERT INTO StaffTechnique" + index + " VALUES(" + codeStaff + ", '" + nom + "', '"
+                + ", '" + fonction + "', " + codeClub + "')";
+            DBManager.Insert(sqlStatement);
+        }
     }
 }
