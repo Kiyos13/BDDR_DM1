@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,14 @@ namespace BDDR_DM1
         public ListMatch()
         {
             InitializeComponent();
+
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+
+            DataTable matchData = DBManager.Select("select * from Match" + index);
+            matchCS.ItemsSource = null;
+            matchCS.ItemsSource = matchData.DefaultView;
+            matchCS.Items.Refresh();
         }
 
         void Return_Click(object sender, RoutedEventArgs e)
