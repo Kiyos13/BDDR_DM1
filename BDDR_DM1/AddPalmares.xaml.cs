@@ -38,11 +38,11 @@ namespace BDDR_DM1
 
             int code = Convert.ToInt32(palmares_code_club.Text.ToString());
             string trophee = palmares_trophee.Text.ToString();
-            DateTime annee = palmares_annee.SelectedDate.Value;
+            int annee = Convert.ToInt32(palmares_annee.Text.ToString());
             int nbMatchsGagnes = Convert.ToInt32(palmares_nb_matchs_gagnes.Text.ToString());
             int nbMatchsPerdus = Convert.ToInt32(palmares_nb_matchs_perdus.Text.ToString());
 
-            string sqlStatement = "INSERT INTO Palmares" + index + " VALUES(" + nbMatchsGagnes + ", " + nbMatchsPerdus + ", " + annee.Display()
+            string sqlStatement = "INSERT INTO Palmares" + index + " VALUES(" + nbMatchsGagnes + ", " + nbMatchsPerdus + ", " + annee.ToSqlYear()
                 + ", '" + trophee + "', " + code + ")";
             DBManager.Insert(sqlStatement);
         }
