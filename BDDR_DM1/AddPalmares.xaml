@@ -37,7 +37,7 @@
 
 
             <TextBox x:Name="palmares_code_club" Margin="0,60,0,0" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-            <DatePicker x:Name="palmares_annee" Margin="0,60,0,0" Grid.Column="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="90"/>
+            <TextBox x:Name="palmares_annee" Margin="0,60,0,0" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="palmares_trophee" Margin="0,60,0,0" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="palmares_nb_matchs_gagnes" Margin="0,60,0,0" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="palmares_nb_matchs_perdus" Margin="0,60,0,0" Grid.Column="5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
