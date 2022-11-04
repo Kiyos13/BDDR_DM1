@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,12 @@ namespace BDDR_DM1
         public HomePage()
         {
             InitializeComponent();
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+            DataTable calendarData = DBManager.Select("select * from Calendrier" + index);
+            calendrierHomePage.ItemsSource = null;
+            calendrierHomePage.ItemsSource = calendarData.DefaultView;
+            calendrierHomePage.Items.Refresh();
         }
 
         void CS_Click(object sender, RoutedEventArgs e)
