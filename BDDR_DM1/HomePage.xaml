@@ -1,0 +1,46 @@
+﻿<Window x:Class="BDDR_DM1.HomePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDDR_DM1"
+        mc:Ignorable="d"
+        Background="AliceBlue"
+        WindowState="Maximized"
+        Title="HomePage" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" Text="Bienvenue dans l'interface de gestion du football de votre région !" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" Text="Calendrier de votre région :" VerticalAlignment="Top"/>
+
+        <Grid Margin="20,100,20,70">
+            <DataGrid Name="calendrierHomePage" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Code du match" Binding="{Binding CodeMatch}" />
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" />
+                    <DataGridTextColumn Header="Heure" Binding="{Binding Heure}" />
+                    <DataGridTextColumn Header="Club A" Binding="{Binding ClubA}" />
+                    <DataGridTextColumn Header="Club B" Binding="{Binding ClubB}" />
+                    <DataGridTextColumn Header="Stade" Binding="{Binding Stade}" />
+                </DataGrid.Columns>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding DetailsCalendrier}" Margin="10" />
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </Grid>
+
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,20,40" Width="100" Height="20" Background="LightGray">
+            <MenuItem Header="Voir plus ...">
+                <MenuItem Header="Liste des clubs sportifs" Click="CS_Click" />
+                <MenuItem Header="Liste des match joués" Click="Match_Click" />
+                <MenuItem Header="Liste des stades" Click="Stade_Click" />
+            </MenuItem>
+        </Menu>
+
+        <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Ajouter" Margin="20,0,20,40" Width="100" Height="20" Background="LightGray" />
+
+
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Déconnexion" Margin="20,30,0,0" Width="100" Height="20" Background="LightGray" />
+    </Grid>
+</Window>
