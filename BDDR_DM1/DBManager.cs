@@ -57,7 +57,8 @@ namespace BDDR_DM1
             try
             {
                 Connection.Open();
-                OracleCommand cmd = new OracleCommand { CommandText = sqlStatement };
+                OracleCommand cmd = Connection.CreateCommand();
+                cmd.CommandText = sqlStatement;
                 cmd.ExecuteNonQuery();
                 Connection.Close();
             }

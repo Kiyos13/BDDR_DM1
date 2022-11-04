@@ -30,5 +30,25 @@ namespace BDDR_DM1
             this.Close();
             homePageWin.Show();
         }
+
+        void onClickAdd(object sender, RoutedEventArgs e)
+        {
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+
+            int code = Convert.ToInt32(joueur_code.Text.ToString());
+            string nom = joueur_nom.Text.ToString();
+            string prenom = joueur_prenom.Text.ToString();
+            DateTime dob = joueur_date_naissance.SelectedDate.Value;
+            string nationalite = joueur_nationalite.Text.ToString();
+            int poids = Convert.ToInt32(joueur_poids.Text.ToString());
+            int taille = Convert.ToInt32(joueur_taille.Text.ToString());
+            string classe = joueur_classe.Text.ToString();
+
+            string sqlStatement = "INSERT INTO Joueur" + index + " VALUES(" + code + ", '" + nom + "', '" + prenom + "', " + dob.Display()
+                + ", '" + nationalite + "', " + poids + ", " + taille + ", '" + classe + "')";
+            DBManager.Insert(sqlStatement);
+        }
+
     }
 }
