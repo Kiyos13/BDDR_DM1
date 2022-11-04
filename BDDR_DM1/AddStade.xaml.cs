@@ -42,8 +42,8 @@ namespace BDDR_DM1
             string region = stade_region.Text.ToString();
             int capacite = Convert.ToInt32(stade_capacite.Text.ToString());
 
-            string sqlStatement = "INSERT INTO Stade" + index + " VALUES(" + code + ", '" + nom + "', '" + ville + "', "
-                + ", '" + region + "', " + capacite + "')";
+            string sqlStatement = "INSERT INTO Stade" + index + " VALUES(" + code + ", '" + nom + "', '" + ville + "', '"
+                + region + "', " + capacite + ")";
             DBManager.Insert(sqlStatement);
         }
     }

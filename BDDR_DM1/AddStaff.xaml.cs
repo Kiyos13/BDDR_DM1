@@ -42,7 +42,7 @@ namespace BDDR_DM1
             string fonction = staff_fonction.Text.ToString();
 
             string sqlStatement = "INSERT INTO StaffTechnique" + index + " VALUES(" + codeStaff + ", '" + nom + "', '"
-                + ", '" + fonction + "', " + codeClub + "')";
+                + fonction + "', " + codeClub + ")";
             DBManager.Insert(sqlStatement);
         }
     }
