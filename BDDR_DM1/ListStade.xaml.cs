@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,14 @@ namespace BDDR_DM1
         public ListStade()
         {
             InitializeComponent();
+
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+
+            DataTable stadeData = DBManager.Select("select * from Stade" + index);
+            stadeCS.ItemsSource = null;
+            stadeCS.ItemsSource = stadeData.DefaultView;
+            stadeCS.Items.Refresh();
         }
 
         void Return_Click(object sender, RoutedEventArgs e)

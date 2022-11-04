@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,28 @@ namespace BDDR_DM1
         public ListCS()
         {
             InitializeComponent();
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+
+            DataTable clubData = DBManager.Select("select * from ClubSportif" + index);
+            clubSportifCS.ItemsSource = null;
+            clubSportifCS.ItemsSource = clubData.DefaultView;
+            clubSportifCS.Items.Refresh();
+
+            DataTable dirigeantData = DBManager.Select("select * from Dirigeant" + index);
+            dirigeantCS.ItemsSource = null;
+            dirigeantCS.ItemsSource = dirigeantData.DefaultView;
+            dirigeantCS.Items.Refresh();
+
+            DataTable joueurData = DBManager.Select("select * from Joueur" + index);
+            joueurCS.ItemsSource = null;
+            joueurCS.ItemsSource = joueurData.DefaultView;
+            joueurCS.Items.Refresh();
+
+            DataTable staffData = DBManager.Select("select * from StaffTechnique" + index);
+            staffCS.ItemsSource = null;
+            staffCS.ItemsSource = staffData.DefaultView;
+            staffCS.Items.Refresh();
         }
 
         void CS_R1_Click(object sender, RoutedEventArgs e)

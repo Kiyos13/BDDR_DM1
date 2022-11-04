@@ -27,73 +27,67 @@
 
 
         <Grid Margin="70,70,20,270">
-            <DataGrid Name="clubSportifCS" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Code du club" Binding="{Binding CodeMatch}" />
-                    <DataGridTextColumn Header="Nom du club" Binding="{Binding Date}" />
-                    <DataGridTextColumn Header="Date de création" Binding="{Binding Heure}" />
-                    <DataGridTextColumn Header="Dirigeant" Binding="{Binding ClubA}" />
-                    <DataGridTextColumn Header="Ville" Binding="{Binding ClubB}" />
-                    <DataGridTextColumn Header="Région" Binding="{Binding Stade}" />
-                </DataGrid.Columns>
-                <DataGrid.RowDetailsTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding DetailsClubSportif}" Margin="10" />
-                    </DataTemplate>
-                </DataGrid.RowDetailsTemplate>
-            </DataGrid>
+            <DataGrid 
+                x:Name="clubSportifCS"
+                AutoGenerateColumns="True" 
+                AllowDrop="True" 
+                CanUserAddRows="False" 
+                HeadersVisibility="Column" 
+                FontSize="20" 
+                ColumnWidth="Auto" 
+                Width="Auto"
+                Height="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
 
         <Grid Margin="70,170,20,200">
-            <DataGrid Name="dirigeantCS" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Code du dirigeant" Binding="{Binding CodeDirigeant}" />
-                    <DataGridTextColumn Header="Nom du dirigeant" Binding="{Binding NomDirigeant}" />
-                    <DataGridTextColumn Header="Prénom du dirigeant" Binding="{Binding PrenomDirigeant}" />
-                    <DataGridTextColumn Header="Profession du dirigeant" Binding="{Binding ProfessionDirigeant}" />
-                </DataGrid.Columns>
-                <DataGrid.RowDetailsTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding DetailsDirigeant}" Margin="10" />
-                    </DataTemplate>
-                </DataGrid.RowDetailsTemplate>
-            </DataGrid>
+            <DataGrid 
+                x:Name="dirigeantCS"
+                AutoGenerateColumns="True" 
+                AllowDrop="True" 
+                CanUserAddRows="False" 
+                HeadersVisibility="Column" 
+                FontSize="20" 
+                ColumnWidth="Auto" 
+                Width="Auto"
+                Height="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
 
         <Grid Margin="70,240,20,20">
-            <DataGrid Name="joueurCS" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Code du joueur" Binding="{Binding CodeJoueur}" />
-                    <DataGridTextColumn Header="Nom" Binding="{Binding NomJoueur}" />
-                    <DataGridTextColumn Header="Prénom" Binding="{Binding PrenomJoueur}" />
-                    <DataGridTextColumn Header="Date de naissance" Binding="{Binding DateNaissanceJoueur}" />
-                    <DataGridTextColumn Header="Nationalité" Binding="{Binding NationaliteJoueur}" />
-                    <DataGridTextColumn Header="Poids" Binding="{Binding PoidsJoueur}" />
-                    <DataGridTextColumn Header="Taille" Binding="{Binding TailleJoueur}" />
-                    <DataGridTextColumn Header="Classe" Binding="{Binding ClasseJoueur}" />
-                </DataGrid.Columns>
-                <DataGrid.RowDetailsTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding DetailsJoueur}" Margin="10" />
-                    </DataTemplate>
-                </DataGrid.RowDetailsTemplate>
-            </DataGrid>
+            <DataGrid 
+                x:Name="joueurCS"
+                AutoGenerateColumns="True" 
+                AllowDrop="True" 
+                CanUserAddRows="False" 
+                HeadersVisibility="Column" 
+                FontSize="20" 
+                ColumnWidth="Auto" 
+                Width="Auto"
+                Height="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
 
         <Grid Margin="70,430,20,-140">
-            <DataGrid Name="staffCS" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Code du staff technique" Binding="{Binding CodeStaff}" />
-                    <DataGridTextColumn Header="Nom" Binding="{Binding NomStaff}" />
-                    <DataGridTextColumn Header="Prénom" Binding="{Binding PrenomStaff}" />
-                    <DataGridTextColumn Header="Fonction" Binding="{Binding FonctionStaff}" />
-                </DataGrid.Columns>
-                <DataGrid.RowDetailsTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding DetailsStaff}" Margin="10" />
-                    </DataTemplate>
-                </DataGrid.RowDetailsTemplate>
-            </DataGrid>
+            <DataGrid 
+                x:Name="staffCS"
+                AutoGenerateColumns="True" 
+                AllowDrop="True" 
+                CanUserAddRows="False" 
+                HeadersVisibility="Column" 
+                FontSize="20" 
+                ColumnWidth="Auto" 
+                Width="Auto"
+                Height="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
 
         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Retour" Margin="20,30,0,0" Width="100" Height="20" Background="LightGray" Click="Return_Click" />

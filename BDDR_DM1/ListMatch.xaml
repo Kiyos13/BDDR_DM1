@@ -12,21 +12,19 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" Text="Matchs de la région : " VerticalAlignment="Top"/>
 
         <Grid Margin="20,70,20,10">
-            <DataGrid Name="clubSportifCS" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Code du match" Binding="{Binding CodeMatch}" />
-                    <DataGridTextColumn Header="Nombre de buts de l'équipe A" Binding="{Binding NbButsA}" />
-                    <DataGridTextColumn Header="Nombre de buts de l'équipe  B" Binding="{Binding NbButsB}" />
-                    <DataGridTextColumn Header="Nombre de spectateurs" Binding="{Binding NbSpectateurs}" />
-                    <DataGridTextColumn Header="Code de l'arbitre" Binding="{Binding CodeArbitre}" />
-                    <DataGridTextColumn Header="Code du stade" Binding="{Binding CodeStade}" />
-                </DataGrid.Columns>
-                <DataGrid.RowDetailsTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding DetailsMatchs}" Margin="10" />
-                    </DataTemplate>
-                </DataGrid.RowDetailsTemplate>
-            </DataGrid>
+            <DataGrid 
+                x:Name="matchCS"
+                AutoGenerateColumns="True" 
+                AllowDrop="True" 
+                CanUserAddRows="False" 
+                HeadersVisibility="Column" 
+                FontSize="20" 
+                ColumnWidth="Auto" 
+                Width="Auto"
+                Height="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
 
         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Retour" Margin="20,30,0,0" Width="100" Height="20" Background="LightGray" Click="Return_Click" />
