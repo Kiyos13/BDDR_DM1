@@ -30,5 +30,27 @@ namespace BDDR_DM1
             this.Close();
             homePageWin.Show();
         }
+
+        void onClickAdd(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int n = DBManager.User.Length;
+                char index = DBManager.User[n - 1];
+
+                int code = Convert.ToInt32(dirigeant_code.Text.ToString());
+                string nom = dirigeant_nom.Text.ToString();
+                string prenom = dirigeant_prenom.Text.ToString();
+                string profession = dirigeant_profession.Text.ToString();
+
+                string sqlStatement = "INSERT INTO Dirigeant" + index + " VALUES(" + code + ", '" + nom + "', '" + prenom + "', '" + profession + "')";
+                DBManager.Insert(sqlStatement);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("mauvais type de donnée entré");
+            }
+        }
     }
 }

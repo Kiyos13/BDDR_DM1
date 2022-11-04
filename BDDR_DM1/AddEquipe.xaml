@@ -40,13 +40,13 @@
 
             <TextBox x:Name="equipe_code_club" Margin="0,60,0,0" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="equipe_code_joueur" Margin="0,60,0,0" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-            <TextBox x:Name="equipe_date_debut_contrat" Margin="0,60,0,0" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-            <TextBox x:Name="equipe_date_fin_contrat" Margin="0,60,0,0" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+            <DatePicker x:Name="equipe_date_debut_contrat" Margin="0,60,0,0" Grid.Column="3" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="90"/>
+            <DatePicker x:Name="equipe_date_fin_contrat" Margin="0,60,0,0" Grid.Column="4" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="equipe_numero_maillot" Margin="0,60,0,0" Grid.Column="5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="equipe_poste" Margin="0,60,0,0" Grid.Column="6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
         </Grid>
 
-        <Button Content="Ajouter l'équipe" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="LightGray" Width="150" Height="20"/>
+        <Button Content="Ajouter l'équipe" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="LightGray" Width="150" Height="20" Click="onClickAdd"/>
 
     </Grid>
 </Window>

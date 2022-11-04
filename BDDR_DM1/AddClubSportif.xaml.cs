@@ -30,5 +30,30 @@ namespace BDDR_DM1
             this.Close();
             homePageWin.Show();
         }
+
+        void onClickAdd(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int n = DBManager.User.Length;
+                char index = DBManager.User[n - 1];
+
+                int code = Convert.ToInt32(club_sportif_code.Text.ToString());
+                string nom = joueur_nom.Text.ToString();
+                DateTime dateCreation = joueur_date_creation.SelectedDate.Value;
+                int dirigeant = Convert.ToInt32(joueur_dirigeant.Text.ToString());
+                string nationalite = joueur_ville.Text.ToString();
+                int region = Convert.ToInt32(joueur_region.Text.ToString());
+
+                string sqlStatement = "INSERT INTO ClubSportif" + index + " VALUES(" + code + ", '" + nom + "', " + dateCreation.Display()
+                    + ", " + dirigeant + ", '" + nationalite + "', " + region + ")";
+                DBManager.Insert(sqlStatement);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("mauvais type de donnée entré");
+            }
+        }
     }
 }
