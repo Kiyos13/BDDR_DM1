@@ -59,13 +59,11 @@ namespace BDDR_DM1
             connectWin.Show();
         }
 
-        void Add_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
         private void Add_Joueur_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addJoueurtWin = new AddJoueur();
+            this.Close();
+            addJoueurtWin.Show();
         }
 
         private void Add_Equipe_Click(object sender, RoutedEventArgs e)

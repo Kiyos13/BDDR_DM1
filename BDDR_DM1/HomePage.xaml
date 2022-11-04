@@ -13,21 +13,6 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" Text="Calendrier de votre région :" VerticalAlignment="Top"/>
 
         <Grid Margin="20,100,20,70">
-            <!--DataGrid Name="calendrierHomePage" AutoGenerateColumns="False" ColumnWidth="auto" Width="auto" Height="auto">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Code du match" Binding="{Binding CodeMatch}" />
-                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" />
-                    <DataGridTextColumn Header="Heure" Binding="{Binding Heure}" />
-                    <DataGridTextColumn Header="Club A" Binding="{Binding ClubA}" />
-                    <DataGridTextColumn Header="Club B" Binding="{Binding ClubB}" />
-                    <DataGridTextColumn Header="Stade" Binding="{Binding Stade}" />
-                </DataGrid.Columns>
-                <DataGrid.RowDetailsTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding DetailsCalendrier}" Margin="10" Foreground="Black"/>
-                    </DataTemplate>
-                </DataGrid.RowDetailsTemplate>
-            </DataGrid-->
             <DataGrid 
                 x:Name="calendrierHomePage"
                 AutoGenerateColumns="True" 
