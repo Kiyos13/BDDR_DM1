@@ -56,5 +56,44 @@ namespace BDDR_DM1
         {
         }
 
+        private void Add_Joueur_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_Equipe_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_Staff_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_Personnel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_Stade_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_Dirigeant_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_CS_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_Palmares_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

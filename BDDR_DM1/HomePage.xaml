@@ -38,7 +38,18 @@
             </MenuItem>
         </Menu>
 
-        <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Ajouter" Margin="20,0,20,40" Width="100" Height="20" Background="LightGray" Click="Add_Click" />
+        <Menu HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20,0,20,40" Width="100" Height="20" Background="LightGray">
+            <MenuItem Header="Ajouter ...">
+                <MenuItem Header="Joueur" Click="Add_Joueur_Click" />
+                <MenuItem Header="Equipe" Click="Add_Equipe_Click" />
+                <MenuItem Header="Staff technique" Click="Add_Staff_Click" />
+                <MenuItem Header="Personnel" Click="Add_Personnel_Click" />
+                <MenuItem Header="Stade" Click="Add_Stade_Click" />
+                <MenuItem Header="Dirigeant" Click="Add_Dirigeant_Click" />
+                <MenuItem Header="Club sportif" Click="Add_CS_Click" />
+                <MenuItem Header="Palmarès" Click="Add_Palmares_Click" />
+            </MenuItem>
+        </Menu>
 
 
         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Déconnexion" Margin="20,30,0,0" Width="100" Height="20" Background="LightGray" Click="Deconnect_Click" />

@@ -24,15 +24,13 @@ namespace BDDR_DM1
         {
             InitializeComponent();
             this.DataContext = this;
-
-            
         }
 
         void Connect_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                DBManager.SetConnection(user_textbox.Text.ToString(), password_textbox.Text.ToString());
+                DBManager.SetConnection(user_textbox.Text.ToString(), password_textbox.Password.ToString());
                 Window homePageWin = new HomePage();
                 this.Close();
                 homePageWin.Show();
@@ -43,5 +41,16 @@ namespace BDDR_DM1
             }
         }
 
+        private void Clear_Login_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (user_textbox.Text.Equals("Nom d'utilisateur"))
+                user_textbox.Text = "";
+        }
+
+        private void Clear_Password_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (password_textbox.Password.Equals("Mot de passe"))
+                password_textbox.Password = "";
+        }
     }
 }
