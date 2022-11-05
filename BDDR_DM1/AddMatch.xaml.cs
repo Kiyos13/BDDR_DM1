@@ -67,7 +67,7 @@ namespace BDDR_DM1
             int clubB = Convert.ToInt32(match_club_b.Text.ToString());
             int code = DBManager.getAutoIncrement("Match" + index);
 
-            string sqlStatement = "INSERT INTO Calendrier" + index + " VALUES(" + code + ", " + date + ", '" + heure + "', " + clubA
+            string sqlStatement = "INSERT INTO Calendrier" + index + " VALUES(" + code + ", " + date.Display() + ", " + heure.ToSqlHour() + ", " + clubA
                 + ", " + clubB + ", " + codeStade + ")";
             DBManager.Insert(sqlStatement);
 
