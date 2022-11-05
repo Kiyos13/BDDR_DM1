@@ -65,9 +65,13 @@ namespace BDDR_DM1
             String heure = match_heure.Text.ToString();
             int clubA = Convert.ToInt32(match_club_a.Text.ToString());
             int clubB = Convert.ToInt32(match_club_b.Text.ToString());
+            int code = DBManager.getAutoIncrement("Match" + index);
 
+            string sqlStatement = "INSERT INTO Calendrier" + index + " VALUES(" + code + ", " + date + ", '" + heure + "', " + clubA
+                + ", " + clubB + ", " + codeStade + ")";
+            DBManager.Insert(sqlStatement);
 
-            string sqlStatement = "INSERT INTO Match" + index + " VALUES(" +  + ", " + nbButsA + ", " + nbButsB + ", " + spectateurs
+            sqlStatement = "INSERT INTO Match" + index + " VALUES(" + code + ", " + nbButsA + ", " + nbButsB + ", " + spectateurs
                 + ", " + codeArbitre + ", " + codeStade + ")";
             DBManager.Insert(sqlStatement);
         }
