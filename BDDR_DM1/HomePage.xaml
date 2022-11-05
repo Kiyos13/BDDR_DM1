@@ -46,6 +46,8 @@
                 <MenuItem Header="Dirigeant" Click="Add_Dirigeant_Click" />
                 <MenuItem Header="Club sportif" Click="Add_CS_Click" />
                 <MenuItem Header="Palmarès" Click="Add_Palmares_Click" />
+                <MenuItem x:Name="add_arbitre_menu" Header="Arbitre" Click="Add_Arbitre_Click" Visibility="Collapsed" />
+                <MenuItem x:Name="add_match_menu" Header="Match" Click="Add_Match_Click" Visibility="Collapsed" />
             </MenuItem>
         </Menu>
 

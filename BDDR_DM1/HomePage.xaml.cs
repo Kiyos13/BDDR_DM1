@@ -29,6 +29,12 @@ namespace BDDR_DM1
             calendrierHomePage.ItemsSource = null;
             calendrierHomePage.ItemsSource = calendarData.DefaultView;
             calendrierHomePage.Items.Refresh();
+
+            if (DBManager.User.Equals("user1"))
+            {
+                add_arbitre_menu.Visibility = Visibility.Visible;
+                add_match_menu.Visibility = Visibility.Visible;
+            }
         }
 
         void CS_Click(object sender, RoutedEventArgs e)
@@ -113,6 +119,20 @@ namespace BDDR_DM1
             Window addPalmaresWin = new AddPalmares();
             this.Close();
             addPalmaresWin.Show();
+        }
+
+        private void Add_Arbitre_Click(object sender, RoutedEventArgs e)
+        {
+            Window addArbitreWin = new AddArbitre();
+            this.Close();
+            addArbitreWin.Show();
+        }
+
+        private void Add_Match_Click(object sender, RoutedEventArgs e)
+        {
+            Window addMatchWin = new AddMatch();
+            this.Close();
+            addMatchWin.Show();
         }
     }
 }
