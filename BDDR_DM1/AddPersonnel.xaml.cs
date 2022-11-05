@@ -52,7 +52,6 @@ namespace BDDR_DM1
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("mauvais type de donnée entré");
             }
         }
