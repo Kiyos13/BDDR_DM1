@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,6 +24,24 @@ namespace BDDR_DM1
         public AddMatch()
         {
             InitializeComponent();
+
+            int n = DBManager.User.Length;
+            char index = DBManager.User[n - 1];
+
+            DataTable allClubSportifData = DBManager.Select("select * from AllClubSportif");
+            clubSportifMatch.ItemsSource = null;
+            clubSportifMatch.ItemsSource = allClubSportifData.DefaultView;
+            clubSportifMatch.Items.Refresh();
+
+            DataTable allStadeData = DBManager.Select("select * from AllStade");
+            stadeMatch.ItemsSource = null;
+            stadeMatch.ItemsSource = allStadeData.DefaultView;
+            stadeMatch.Items.Refresh();
+
+            DataTable allArbitreData = DBManager.Select("select * from Arbitre1");
+            arbitreMatch.ItemsSource = null;
+            arbitreMatch.ItemsSource = allArbitreData.DefaultView;
+            arbitreMatch.Items.Refresh();
         }
 
         void Return_Click(object sender, RoutedEventArgs e)
