@@ -44,7 +44,7 @@ namespace BDDR_DM1
             string clubPref = arbitre_club_prefere.Text.ToString();
             
 
-            string sqlStatement = "INSERT INTO Match" + index + " VALUES(" + code + ", '" + nom + "', '" + prenom + "', " + dob.Display()
+            string sqlStatement = "INSERT INTO Arbitre" + index + " VALUES(" + code + ", '" + nom + "', '" + prenom + "', " + dob.Display()
                 + ", '" + clubPref + "', '" + region + "')";
             DBManager.Insert(sqlStatement);
         }
