@@ -97,12 +97,12 @@
             <TextBlock TextAlignment="Center" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Nombre de spectateurs" VerticalAlignment="Top"/>
             <TextBlock TextAlignment="Center" Grid.Column="5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Code de l'arbitre" VerticalAlignment="Top"/>
             <TextBlock TextAlignment="Center" Grid.Column="6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Code du stade" VerticalAlignment="Top"/>
-            <TextBlock TextAlignment="Center" Grid.Column="7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Code du stade" VerticalAlignment="Top"/>
-            <TextBlock TextAlignment="Center" Grid.Column="8" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Code du stade" VerticalAlignment="Top"/>
-            <TextBlock TextAlignment="Center" Grid.Column="9" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Code du stade" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Heure" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="8" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Club A" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" Grid.Column="9" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Club B" VerticalAlignment="Top"/>
 
 
-            <TextBox x:Name="match_date" Margin="0,60,0,0" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
+            <DatePicker x:Name="match_date" Margin="0,60,0,0" Grid.Column="1" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="80"/>
             <TextBox x:Name="match_nb_buts_a" Margin="0,60,0,0" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
             <TextBox x:Name="match_nb_buts_b" Margin="0,60,0,0" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
             <TextBox x:Name="match_nb_spectateurs" Margin="0,60,0,0" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>

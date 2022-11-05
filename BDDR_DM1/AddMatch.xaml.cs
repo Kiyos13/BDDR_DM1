@@ -56,14 +56,18 @@ namespace BDDR_DM1
             int n = DBManager.User.Length;
             char index = DBManager.User[n - 1];
 
-            int codeMatch = Convert.ToInt32(match_code_match.Text.ToString());
+            DateTime date = match_date.SelectedDate.Value;
             int nbButsA = Convert.ToInt32(match_nb_buts_a.Text.ToString());
             int nbButsB = Convert.ToInt32(match_nb_buts_b.Text.ToString());
             int spectateurs = Convert.ToInt32(match_nb_spectateurs.Text.ToString());
             int codeArbitre = Convert.ToInt32(match_code_arbitre.Text.ToString());
             int codeStade = Convert.ToInt32(match_code_stade.Text.ToString());
+            String heure = match_heure.Text.ToString();
+            int clubA = Convert.ToInt32(match_club_a.Text.ToString());
+            int clubB = Convert.ToInt32(match_club_b.Text.ToString());
 
-            string sqlStatement = "INSERT INTO Match" + index + " VALUES(" + codeMatch + ", " + nbButsA + ", " + nbButsB + ", " + spectateurs
+
+            string sqlStatement = "INSERT INTO Match" + index + " VALUES(" +  + ", " + nbButsA + ", " + nbButsB + ", " + spectateurs
                 + ", " + codeArbitre + ", " + codeStade + ")";
             DBManager.Insert(sqlStatement);
         }
