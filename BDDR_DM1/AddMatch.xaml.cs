@@ -28,12 +28,12 @@ namespace BDDR_DM1
             int n = DBManager.User.Length;
             char index = DBManager.User[n - 1];
 
-            DataTable allClubSportifData = DBManager.Select("select * from AllClubSportif");
+            DataTable allClubSportifData = DBManager.Select("select * from AllClubsSportif");
             clubSportifMatch.ItemsSource = null;
             clubSportifMatch.ItemsSource = allClubSportifData.DefaultView;
             clubSportifMatch.Items.Refresh();
 
-            DataTable allStadeData = DBManager.Select("select * from AllStade");
+            DataTable allStadeData = DBManager.Select("select * from AllStades");
             stadeMatch.ItemsSource = null;
             stadeMatch.ItemsSource = allStadeData.DefaultView;
             stadeMatch.Items.Refresh();
