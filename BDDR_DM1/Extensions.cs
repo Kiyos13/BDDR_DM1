@@ -19,5 +19,11 @@ namespace BDDR_DM1
             string str = "TO_DATE('" + year + "', 'YYYY')";
             return str;
         }
+
+        public static string ToSqlHour(this string hour)
+        {
+            string str = "TO_DATE('" + hour + "', 'HH24:Mi')";
+            return str;
+        }
     }
 }
