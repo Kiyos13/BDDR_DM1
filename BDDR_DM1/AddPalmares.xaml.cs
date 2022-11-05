@@ -42,8 +42,8 @@ namespace BDDR_DM1
             int nbMatchsGagnes = Convert.ToInt32(palmares_nb_matchs_gagnes.Text.ToString());
             int nbMatchsPerdus = Convert.ToInt32(palmares_nb_matchs_perdus.Text.ToString());
 
-            string sqlStatement = "INSERT INTO Palmares" + index + " VALUES(" + nbMatchsGagnes + ", " + nbMatchsPerdus + ", " + annee.ToSqlYear()
-                + ", '" + trophee + "', " + code + ")";
+            string sqlStatement = "INSERT INTO Palmares" + index + " VALUES(" + code + ", " + annee.ToSqlYear() + ", '" + trophee
+                + "', " + nbMatchsGagnes + ", " + nbMatchsPerdus + ")";
             DBManager.Insert(sqlStatement);
         }
     }
