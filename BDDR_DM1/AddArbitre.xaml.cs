@@ -45,7 +45,7 @@ namespace BDDR_DM1
             
 
             string sqlStatement = "INSERT INTO Match" + index + " VALUES(" + code + ", '" + nom + "', '" + prenom + "', " + dob.Display()
-                + ", '" + region + "', '" + clubPref + "')";
+                + ", '" + clubPref + "', '" + region + "')";
             DBManager.Insert(sqlStatement);
         }
     }
