@@ -68,5 +68,11 @@ namespace BDDR_DM1
                 throw e;
             }
         }
+
+        public static int getAutoIncrement(string table)
+        {
+            string idName = Select("select * from " + table).Columns[0].ColumnName;
+            return Convert.ToInt32(Select("select max(" + idName + ") from " + table).Rows[0].ItemArray[0]) + 1;
+        }
     }
 }
